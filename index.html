@@ -15,9 +15,9 @@
 
 <body>
 
-    <!-- <div class="sticky-top border-bottom shadow-sm p-3 mb-5 bg-white rounded center">
+    <div class="sticky-top border-bottom shadow-sm p-1 mb-5 rounded center" style="color:white; background-color: black;">
         <h2 id="title">Measure</h2>
-    </div> -->
+    </div>
 
 
     <div class="ppg-container">
@@ -507,7 +507,14 @@ new WindowFunction(DSP.Hamming).process(256);
     }
 
     function trainClick() {
-        window.PPG.connectDrive(params.getPPGTime());
+        if(window.webkit.messageHandlers){
+            window.webkit.messageHandlers.PPG({action : connectDrive, data: params.getPPGTime()});
+
+        }else{
+            window.PPG.connectDrive(params.getPPGTime());
+
+        }
+
         init_val = params.init_val;
         $("#start-ui").hide();
         $("#measuring").show();
