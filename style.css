@@ -1,0 +1,56 @@
+  .list-group-title {
+      font-size: 12px;
+      color: #ccc;
+      font-weight: 700;
+  }
+
+  .center {
+      text-align: center;
+  }
+
+  .ppg-container{
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin:16px auto;
+
+  }
+
+  .ppg-btn{
+    border-radius: 50px;
+    color: white;
+    font-weight: 700;
+    margin:8px;
+    padding:4px;
+    width:100%;
+  }
+  .ppg-btn.start-btn{
+    background-color: #f6b800;
+}
+.ppg-btn.start-btn:hover{
+    background-color: #fbc31c;
+    color:white;
+}
+
+
+.time{
+    color: #fbc31c;
+    font-size: 100px;
+    font-family: monospace, sans-serif;
+    margin-right:8px;
+}
+.measuring-desc{
+  align-items: center;
+  display: flex;
+}
+
+input.error{
+  border:1px solid red !important;
+  border-radius: 4px;
+}
+form .error{
+  font-size: 12px;
+  color:red;
+  display: block;
+  text-align: right;
+}
