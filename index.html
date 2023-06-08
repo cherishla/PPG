@@ -507,11 +507,8 @@ new WindowFunction(DSP.Hamming).process(256);
     }
 
     function trainClick() {
-        alert(1);
-        if(window.webkit.messageHandlers){
-            alert(2);
-            
-            window.webkit.messageHandlers.PPG.postMessage({action : connectDrive, data: params.getPPGTime()});
+        if(window.webkit && window.webkit.messageHandlers){
+            window.webkit.messageHandlers.PPG.postMessage(1);
 
         }else{
             window.PPG.connectDrive(params.getPPGTime());
